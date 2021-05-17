@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='logo.png') }}" rel="icon">
+    <title>AG About me</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div style="margin-left:10px">
+        <h1>About me</h1>
+        <hr>
+        <img style="width:200px" src="{{ url_for('static', filename='ja.png') }}" style="width:100%">
+        <h3>Cześć! Nazywam się Adrian Gielata.</h3>
+        <div style="width:80%">
+            <p>
+                Z branżą IT mam do czynienia od najmłodszych lat. Zaczynałem od składania i konfigurowania komputerów stacjonarnych.
+                Wybór szkoły średniej był oczywisty, kierunek Informatyka. Im głębiej wchodziłem w ten świat tym bardziej rozumiałem, że to jest to co chcę robić w życiu.
+                Studia o specjalizacji „Programowanie aplikacji w chmurze” idealnie sprawdzają się jako ścieżka dalszego rozwoju.
+            </p>
+             <p>
+                 W 2017 roku otworzyłem własną działalność oferującą tworzenie stron internetowych i zarządzanie nimi.
+                 Od tamtego czasu zaufało mi wielu przedsiębiorców. Współpracując z daną firmą starałem się wypełniać rzetelnie polecenia i wymagania klienta.
+                 Większość z nich do dziś korzysta z moich usług.
+            </p>
+            <p>
+                Od 2018 pracuję w Santander Consumer Banku na stanowisku Tester IT, w pracy zajmuję się wykonywaniem testów, przygotowywaniem przypadków testowych,
+                raportowaniem błędów, współpracą z dostawcą oprogramowania czy szukaniem przyczyn problemu.
+                Sukcesywnie staram się wdrażać do projektu testy automatyczne, korzystając między innymi z Selenium
+            </p>
+        </div>
+    </div>
+</body>
+</html>

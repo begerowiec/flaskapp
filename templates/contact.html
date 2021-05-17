@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='my.css') }}">
+    <link href="{{ url_for('static', filename='logo.png') }}" rel="icon">
+    <title>AG Contact</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div style="margin-left:10px">
+        <h1>Contact</h1>
+        <hr>
+        <p>Imię i nazwisko</p>
+        <h3>Adrian Gielata</h3>
+        <p>Moja strona</p>
+        <a href = "https://adriangielata.site" style="text-decoration:none; color:black"><h3>www.AdrianGielata.site</h3></a>
+        <p>Email</p>
+        <a href = "mailto: kontakt@adriangielata.site" style="text-decoration:none; color:black"><h3> Kontakt@AdrianGielata.site</h3></a>
+        <a href = "https://www.linkedin.com/in/adrian-gielata-600654168" style="text-decoration:none; color:black"><p>LinkedIn</p><img src="{{ url_for('static', filename='in.png') }}" style="width:50px" alt="linkedin"> Click Me :)</a>
+    </div>
+</body>
+</html>

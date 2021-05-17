@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='my.css') }}">
+    <link href="{{ url_for('static', filename='logo.png') }}" rel="icon">
+<title>AG Home page</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div style="margin-left:10px">
+        <h1> Home Page</h1>
+        <hr>
+        <h2>Strona typu Portfolio na PIAC Laboratorium 1</h2>
+        <p>a tutaj niżej mamy kotka :)</p>
+        <img src="{{ url_for('static', filename='cat.png') }}" alt="Cat"><br>
+    </div>
+</body>
+</html>
