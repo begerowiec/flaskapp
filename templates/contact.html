@@ -1,24 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='my.css') }}">
-    <link href="{{ url_for('static', filename='logo.png') }}" rel="icon">
-    <title>AG Contact</title>
-</head>
-<body>
-    {% include 'navbar.html' %}
-    <div style="margin-left:10px">
-        <h1>Contact</h1>
-        <hr>
-        <p>Imię i nazwisko</p>
-        <h3>Adrian Gielata</h3>
-        <p>Moja strona</p>
-        <a href = "https://adriangielata.site" style="text-decoration:none; color:black"><h3>www.AdrianGielata.site</h3></a>
-        <p>Email</p>
-        <a href = "mailto: kontakt@adriangielata.site" style="text-decoration:none; color:black"><h3> Kontakt@AdrianGielata.site</h3></a>
-        <a href = "https://www.linkedin.com/in/adrian-gielata-600654168" style="text-decoration:none; color:black"><p>LinkedIn</p><img src="{{ url_for('static', filename='in.png') }}" style="width:50px" alt="linkedin"> Click Me :)</a>
+{% include 'navbar.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Contact</h1>
+            <hr>
+            <p>Imię i nazwisko</p>
+            <h3>Adrian Gielata</h3>
+            <p>Moja strona</p>
+            <a href = "https://adriangielata.site" style="text-decoration:none; color:black"><h3>www.AdrianGielata.site</h3></a>
+            <p>Email</p>
+            <a href = "mailto: kontakt@adriangielata.site" style="text-decoration:none; color:black"><h3> Kontakt@AdrianGielata.site</h3></a>
+            <a href = "https://www.linkedin.com/in/adrian-gielata-600654168" style="text-decoration:none; color:black"><p>LinkedIn</p><img src="{{ url_for('static', filename='in.png') }}" style="width:50px" alt="linkedin"> Click Me :)</a>
+        </div>
     </div>
-</body>
-</html>
+    <div class="row" style="padding-top:20px">
+        <div class="col-sm-8">
+            <h5 class="title-left">
+              Wyślij mi wiadomość
+            </h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Twoje imię" data-rule="minlen:4" data-msg="Wpisz swoje imię" />
+          </div>
+        </div>
+            <div class="col-md-12 mb-3">
+              <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Twój email" data-rule="email" data-msg="Podaj swój email" />
+            <div class="validation"></div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Temat" data-rule="minlen:4" data-msg="Proszę wprowadzić temat." />
+              <div class="validation"></div>
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" data-rule="required" placeholder="Wiadomość"  data-msg="Napisz coś dla Mnie"></textarea>
+            <div class="validation"></div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary">Wyślij wiadomosć</button>
+        </div>
+  </div>
+</div>

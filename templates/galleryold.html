@@ -1,0 +1,23 @@
+{% include 'navbar.html' %}
+<div class="container" style="padding-top:30px">
+    <div class="row">
+        <div class="col-3">
+            <a href="{{ url_for('static', filename='1.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='1.jpg') }}" alt="Adam Małysz"></a>
+        </div>
+        <div class="col-3">
+            <a  href="{{ url_for('static', filename='2.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='2.jpg') }}" alt="Kamil Stoch"></a>
+        </div>
+        <div class="col-3">
+            <a href="{{ url_for('static', filename='3.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='3.jpg') }}" alt="Janne Ahonen"></a>
+        </div>
+        <div class="col-3">
+            <a href="{{ url_for('static', filename='4.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='4.jpg') }}" alt="Martin Schmitt"></a>
+        </div>
+        <div class="col-3">
+            <a href="{{ url_for('static', filename='5.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='5.jpg') }}" alt="Dawid Kubacki"></a>
+        </div>
+    </div>
+</div>
+<script>
+  $('a.gallery').colorbox({width:'60%'});
+</script>
