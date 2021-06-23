@@ -1,0 +1,33 @@
+{% include 'navbar.html' %}
+
+<div class="container">
+    <div class="row">
+        <div class="col"><h1>Księga gości</h1>  </div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Zostaw mi swoją opinię!</h3>
+        </div>
+        <form method="POST" action="">
+          <div class="col-5">
+            <label for="nick" class="form-label">Nick</label>
+            <input type="text" class="form-control" name="nick" id="nick">
+          </div>
+          <div class="col-5">
+            <label for="tekst" class="form-label">Tekst</label>
+              <textarea class="form-control" name="tekst" id="tekst"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:20px">Wyślij</button>
+        </form>
+    </div>
+    <div class="row" style="margin-top:30px;">
+        <div class="col"><h3>Opinie innych gości</h3> <hr></div>
+    </div>
+        {% for post in allposts %}
+            <div class="row" style="margin-top:30px">
+                <div class="col-3 offset-2"><p style="font-size:30px">{{ post[1] }}</p> <p>{{ post[3] }}</p> </div>
+                <div class="col" style="border: 1px solid black; border-radius:10px"><p >{{ post[2] }}</p></div>
+            </div>
+        {% endfor %}
+</div>

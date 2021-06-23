@@ -1,11 +1,42 @@
 
-    {% include 'navbar.html' %}
-    <div style="margin-left:10px">
-        <h1> Home Page</h1>
-        <hr>
-        <h2>Strona typu Portfolio na PIAC</h2>
-        <p>a tutaj niżej mamy kotka :)</p>
-        <img src="{{ url_for('static', filename='cat.png') }}" alt="Cat"><br>
+{% include 'navbar.html' %}
+<div style="margin-left:10px">
+    <h1> Home Page</h1>
+    <hr>
+    <h2>Strona typu Portfolio na PIAC</h2>
+    <div class="container" style="padding-top:30px">
+        <div class="row">
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='1.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='1.jpg') }}" alt="Adam Małysz"></a>
+            </div>
+            <div class="col-4">
+                <a  href="{{ url_for('static', filename='2.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='2.jpg') }}" alt="Kamil Stoch"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='3.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='3.jpg') }}" alt="Janne Ahonen"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='4.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='4.jpg') }}" alt="Martin Schmitt"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='5.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='5.jpg') }}" alt="Dawid Kubacki"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='6.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='6.jpg') }}" alt="Dawid Kubacki"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='7.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='7.jpg') }}" alt="Dawid Kubacki"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='8.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='8.jpg') }}" alt="Dawid Kubacki"></a>
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('static', filename='9.jpg') }}" class="gallery"><img style="width:300px;padding-top:10px" src="{{ url_for('static', filename='9.jpg') }}" alt="Dawid Kubacki"></a>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>
+
+<script>
+  $('a.gallery').colorbox({width:'60%'});
+</script>
